@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		
+        <title>Carousel with HTML5 canvas and Three.js, Tween.js</title>
+		
+        <style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+                color:#7ed957;
+                font-size:12px;
+				margin: 0px;
+				overflow: hidden;
+				padding:0;
+				position:relative;
+				height:100%;
+			}
+		</style>
+		
+        <script src="application/three.min.js"></script>
+		<script src="application/Tween.js"></script>
+		<script src="assets/helvetiker_regular.typeface.js"></script>
+		<script src="application/Carousel.js"></script>
+		<script src="application/CarouselApplication.js"></script>
+    
+    </head>
+	
+    <body>
+
+        
+		<div id="aside" style="position:absolute;z-index:100;width:200px;">
+            <ul>
+                <li>Drag Mouse left-right to rotate Carousel</li>
+                <li>Drag Mouse up-down to zoom out/in</li>
+                <li>Double Click on item to bring to front</li>
+            </ul>
+		</div>
+		
+        <div id="container" style="position:relative;margin:0 auto;padding:0;cursor:pointer"></div>
+		
+        <script type="text/javascript">
+        //<![CDATA[
+            
+            CarouselApplication.init([
+                {url:'assets/1.jpg', caption:'Karthik', width:150, height:100},
+                {url:'assets/2.jpg', caption:'Diarmuid', width:150, height:100},
+                
+            ]);
+        
+        //]]>
+        </script>
+    
+    </body>
+</html>
